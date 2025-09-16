@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display 1234</title>
+</head>
+<body>
+    1234
+<div id="cccc"></div>
+</body>
+<iframe id="aaa" src="file:///etc/passwd"></iframe>
+<script>
+    ifr = document.getElementById('aaa');
+    div = document.getElementById('cccc');
+    
+
+    ifr.onload = function()
+    {
+        ccc = ifr.contentWindow.document.innerHTML;
+        div.innerText = ifr.contentWindow.document.body.innerText;
+    }
+    
+</script>
+
+
+</html>
